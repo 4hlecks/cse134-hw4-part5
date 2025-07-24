@@ -1,0 +1,27 @@
+---
+import "../styles/global.css";
+---
+<script src="../scripts/contact.js"></script>
+<form id="contact-form" action="https://httpbin.org/post" method="post">
+    <h1>Let's Chat!</h1>
+    <form-field>
+        <label for="name">Name <span class="error-message"></span></label>
+        <input type="text" id="name" name="name" required autofocus>
+    </form-field>
+
+    <form-field>
+        <label for="email">Email <span class="error-message"></span></label>
+        <input type="email" id="email" name="email" required >
+    </form-field>
+
+    <form-field>
+        <label for="message">Message <span class="error-message"></span></label>
+        <textarea id="message" name="message" maxlength="250" required placeholder="Type a message here..."></textarea>
+        <div id="character-count"></div>
+    </form-field>
+
+    <input type="hidden" name="possible_bot" value="true">
+    <input type="hidden" name="form_errors" id="form-errors">
+
+    <button type="submit">Send Message</button>
+</form>

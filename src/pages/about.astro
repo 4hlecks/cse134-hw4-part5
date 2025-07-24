@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CardWrapper from "../components/CardWrapper.astro";
+import UserCard from "../components/UserCard.astro";
+import MaintenanceCard from "../components/MaintenanceCard.astro";
+import "../styles/global.css";
+---
+
+<BaseLayout pageTitle="About">
+        <main>
+            <CardWrapper>
+              <UserCard></UserCard>
+              <MaintenanceCard></MaintenanceCard>
+            </CardWrapper>
+        </main>
+</BaseLayout>
