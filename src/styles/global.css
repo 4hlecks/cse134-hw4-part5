@@ -332,20 +332,20 @@ article {
 
 /* Light Theme */
 #theme-toggle.light {
-    background-image: url('media/toggle-left.svg');
+    background-image: url('/media/toggle-left.svg');
 }
 
 #theme-toggle.light:hover {
-    background-image: url('media/toggle-left-hover.svg');
+    background-image: url('/media/toggle-left-hover.svg');
 }
 
 /* Dark Theme */
 #theme-toggle.dark {
-    background-image: url('media/toggle-right.svg');
+    background-image: url('/media/toggle-right.svg');
 }
 
 #theme-toggle.dark:hover {
-    background-image: url('media/toggle-right-hover.svg');
+    background-image: url('/media/toggle-right-hover.svg');
 }
 
 /* Tablet Screen Size */
