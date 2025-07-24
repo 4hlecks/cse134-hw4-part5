@@ -1,0 +1,43 @@
+/* Global Styles */
+:root {
+    /* Font Settings */
+    --font-family: 'Onest', Helvetica, Arial, sans-serif;
+    --font-display: fallback;
+    --text-color: #332a25;
+    --text-color-contrast: #fdf9ee;
+    --font-weight-thin: 300;
+    --font-size: 20px;
+    --font-weight: 500;
+    --font-size-navigation: 20px;
+    --font-weight-navigation: 600;
+    --font-size-large: 96px;
+    --font-weight-large: 700;
+    --font-size-fallback: 24px;
+    --font-weight-fallback: 600;
+
+    /* Transition Effects */
+    --transition: font-size 0.5s ease-in-out,
+            background-color 0.5s ease-in-out,
+            color 0.25s ease-in-out,
+            font-color 0.15s ease-in-out,
+            transform 0.5s ease-in-out,
+            width 1s ease-in-out;
+
+    /* Color Settings */
+    --primary-color: #fdf9ee;
+    --secondary-color: #f0ece0;
+    --tertiary-color: #ebe3d6;
+    --hover-color: #6688cc;
+    --contrast-color: #332a25;
+
+    /* Border Radius */
+    --container-border-radius: 24px;
+    --button-border-radius: 24px;
+}
+
+* {
+    font-family: var(--font-family);
+    font-display: var(--font-display);
+    color: var(--text-color);
+    transition: var(--transition);
+}

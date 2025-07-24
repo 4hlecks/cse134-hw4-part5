@@ -1,0 +1,141 @@
+@import url("main.css");
+body {
+    display: grid;
+    grid-template-columns: 64% 36%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+
+    /* Font Settings */
+    --font-weight: 500;
+    --font-size-navigation: var(--font-size-large);
+    
+    /* Both halves of the page */
+    header,nav {
+        height: 100dvh;
+        text-align: center;
+    }
+
+    /* Left half of the page */
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--primary-color);
+
+        h1,p {
+            margin: 0;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        h1 {
+            font-weight: var(--font-weight-large, var(--font-weight-fallback));
+            font-size: var(--font-size-large, var(--font-size-fallback));
+        }
+
+        p {
+            font-weight: var(--font-weight, var(--font-weight-fallback));
+            font-size: var(--font-size, var(--font-size-fallback));
+        }
+    }
+
+    /* Right half of the page */
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: var(--secondary-color);
+        
+        a {
+            display: block;
+            flex-grow: 1;
+            align-content: center;
+            text-decoration: none;
+            font-weight: var(--font-weight-navigation, var(--font-weight-fallback));
+            font-size: var(--font-size-navigation, var(--font-size-fallback));
+            background-color: var(--secondary-color);
+
+            &:hover {
+                transition: font-size 0.5s ease-in-out;
+                font-size: calc(var(--font-size-navigation, var(--font-size-fallback)) * 1.1);
+                color: var(--hover-color);
+                background-color: var(--tertiary-color);
+            }
+        }
+    }
+}
+
+/* Slightly Narrow and Slightly Short Screen Size */
+@media (max-width: 72rem) or (max-height: 40rem) {
+    :root {
+        /* Font Settings */
+        --font-size: 16px;
+        --font-weight: 600;
+        --font-size-large: 64px;
+        --font-weight-large: 700;
+    }
+
+}
+
+/* Narrow Screen Size (e.g., Phone) */
+@media (max-width: 48rem) {
+    :root {
+        /* Font Settings */
+        --font-size: 16px;
+        --font-weight: 600;
+        --font-size-large: 64px;
+        --font-weight-large: 700;
+    }
+
+    body {
+        display: grid;
+        height: 100dvh;
+        grid-template-columns: initial;
+        grid-template-rows: 36% 64%;
+
+        /* Both halves of the page */
+        header,nav {
+            height: initial;
+            text-align: center;
+        }
+
+        /* Upper half of the page */
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Lower half of the page */
+        nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+/* Short Screen Size */
+@media (max-height: 32rem) {
+    :root {
+        /* Font Settings */
+        --font-size: 14px;
+        --font-weight: 600;
+        --font-size-large: 48px;
+        --font-weight-large: 700;
+    }
+}
+
+/* Narrow & Short Screen Size */
+@media (max-width: 48rem) and (max-height: 24rem) {
+    :root {
+        /* Font Settings */
+        --font-size: 10px;
+        --font-weight: 600;
+        --font-size-large: 24px;
+        --font-weight-large: 700;
+    }
+}
