@@ -276,6 +276,7 @@ article {
 
         input,textarea {
             padding: 1rem;
+            color: var(--text-color-form);
             border: 2px solid var(--contrast-color);
             border-radius: 4px;
             font-size: var(--font-size);

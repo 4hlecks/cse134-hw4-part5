@@ -4,6 +4,12 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
     vite: {
-    assetsInclude: ['media/*.svg'], // Adjust path if needed
+    assetsInclude: [
+      'media/*.svg',
+      'media/*.png',
+      'media/*.jpg',
+      'media/*.jpeg',
+      'media/*.webp'
+    ],
   },
 });
